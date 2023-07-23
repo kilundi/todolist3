@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ToDo List</h1>
+        <div class="add-task-container">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <input type="date" id="dueDateInput">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="filter-container">
+            <label>
+                <input type="checkbox" id="showCompleted" onchange="toDoList.filterTasks()">
+                Show Completed
+            </label>
+
+            <label>
+                <input type="checkbox" id="showUncompleted" onchange="toDoList.filterTasks()">
+                Show Uncompleted
+            </label>
+
+            <label>
+                Show Due Date: <br>
+                <input type="date" id="filterDueDate" onchange="toDoList.filterTasks()">
+            </label>
+        </div>
+
+        <div class="task-list-container">
+            <ul class="task-list" id="taskList"></ul>
+        </div>
+
+        <button class="delete-btn" onclick="toDoList.deleteCompletedTasks()" id="deleteCompletedBtn">Delete Completed
+            Tasks</button>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

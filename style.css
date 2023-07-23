@@ -1,0 +1,173 @@
+    body,
+    h1,
+    ul,
+    li,
+    input,
+    button {
+        margin: 0;
+        padding: 0;
+        font-family: var(--H1-H5-FONT);
+        font-size: 1.1rem;
+        background: var(--PRIMARY);
+        color: var(--SECONDARY);
+
+    }
+
+    :root {
+        --H1-H5-FONT: "Lato-Black";
+        --ITALIC-FONT: italic;
+        --BODY-FONT: 'Lato', sans-serif;
+        --PRIMARY: #161922;
+        --SECONDARY: #dadada;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    h1, .container label input, .container .add-task-container input {
+        text-align: center;
+
+        background: var(--SECONDARY);
+        color: var(--PRIMARY);
+    }
+
+    .container {
+        margin-top: 3rem;
+        max-width: 600px;
+        /*     margin: 0 auto; */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-task-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr .8fr;
+        gap: 1rem;
+    }
+
+    .add-task-container input[type="text"],
+    .add-task-container input[type="date"],
+    .add-task-container button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .add-task-container button {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    .task-list-container {
+        margin-bottom: 10px;
+    }
+
+    .filter-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr .8fr;
+        grid-gap: 1rem;
+        background: var(--SECONDARY);
+        color: var(--PRIMARY);
+        margin: 1rem 0;
+        border-radius: 3px;
+    }
+
+    .filter-container input[type="checkbox"],
+    .filter-container input[type="date"] {
+        margin-right: 5px;
+    }
+
+    .task-list {
+        list-style-type: none;
+        padding: 0;
+        /* margin-right: 3rem; */
+    }
+
+    .task-list li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        max-width: 550px;
+        background: var(--SECONDARY);
+        color: var(--PRIMARY);
+        border-radius: 1rem;
+    }
+
+    .task-list li input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .task-list li .task-text {
+        flex: 1;
+        padding-right: 10px;
+    }
+
+    .task-list li .due-date {
+        color: #888;
+    }
+
+    .task-list-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .task-completed {
+        text-decoration: line-through;
+        color: #888;
+    }
+
+    .delete-btn {
+        display: block;
+        margin: 0 auto;
+        background-color: #ff0000;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        background-color: #cc0000;
+    }
+
+    .task-list li .task-completed input[type="checkbox"] {
+        margin-right: 2rem;
+    }
+
+    /* Add space between the checkbox and due date text */
+    .split {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Styles for the due date text */
+    .due-date {
+        color: #888;
+        margin-left: 3rem;
+    }
+
+    .generatedhtml {
+        width: 100%;
+        /*  background: #cc0000; */
+        max-width: 500px;
+        overflow: hidden;
+        word-wrap: break-word;
+        padding: 1rem;
+        padding-left: 1rem;
+    }
